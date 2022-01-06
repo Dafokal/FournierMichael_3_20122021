@@ -6,7 +6,7 @@
   padding: 0;
   border: 0;
   font-style: normal;
-  font-family: Raleway, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 html {
@@ -46,7 +46,7 @@ button {
 }
 
 .medium {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .bold {
@@ -54,10 +54,11 @@ button {
 }
 
 .extra-bold {
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .card {
+  position: relative;
   flex: 1 0 45%;
   min-width: 21em;
   height: 20em;
@@ -101,19 +102,6 @@ button {
   margin-top: 0.5em;
   font-size: 1.3em;
 }
-.card__link-info-heart {
-  position: relative;
-  bottom: 0.2em;
-  color: #3d3d3d;
-  font-size: 2em;
-  margin-right: 1em;
-}
-.card__link-info-heart--inside {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-}
 .card__link-new {
   position: absolute;
   top: 1em;
@@ -122,6 +110,40 @@ button {
   color: #008766;
   padding: 0.5em 0.8em;
   font-size: 1.2em;
+}
+.card__heart {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  font-size: 2em;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+.card__heart--outside {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #3d3d3d;
+  transition: opacity 200ms ease-in-out;
+}
+.card__heart--outside:hover {
+  opacity: 0;
+}
+.card__heart--outside:hover + i {
+  opacity: 1;
+}
+.card__heart--inside {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 200ms ease-in-out;
 }
 
 .header {
@@ -195,7 +217,7 @@ button {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  background: linear-gradient(#ea72da, #a95ddc);
+  background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0 3px 5px #b8b8b8;
 }
 @media screen and (min-width: 768px) {
@@ -251,16 +273,18 @@ button {
   padding-top: 0.35em;
   text-align: center;
   color: white;
-  background-color: #9356dc;
+  background-color: #9356DC;
   border-radius: 10em;
 }
 .nav__function-info-icon {
   white-space: nowrap;
   font-size: 1.5em;
+  text-align: center;
   color: #7e7e7e;
+  width: 1em;
 }
-.nav__function-info-icon--purple {
-  color: #9356dc;
+.nav__function-info-icon--primary {
+  color: #9356DC;
 }
 .nav__function-info-text {
   margin-left: 1.5em;

@@ -60,7 +60,7 @@
             padding: 1em 1.5em;
             display: block;
             width: max-content;
-            background: linear-gradient(#ea72da, #a95ddc);
+            background: linear-gradient($color-secondary, $color-primary);
             box-shadow: 0 3px 5px $box-shadow;
             @media screen and (min-width: 768px){
                 margin-left: 0;
@@ -109,15 +109,17 @@
                 padding-top: 0.35em;
                 text-align: center;
                 color: white;
-                background-color: #9356dc;
+                background-color: $color-primary;
                 border-radius: 10em;
             }
             &-icon{
                 white-space: nowrap;
                 font-size: 1.5em;
+                text-align: center;
                 color: #7e7e7e;
-                &--purple{
-                    color: #9356dc;
+                width: 1em;
+                &--primary{
+                    color: $color-primary;
                 }
             }
             &-text{
