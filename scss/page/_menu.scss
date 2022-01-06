@@ -1,0 +1,101 @@
+.menu{
+    &__img{
+        width: 100%;
+        height: 20em;
+        object-fit: cover;
+    }
+
+    &__shop{
+        position: relative;
+        bottom: 4em;
+        margin-bottom: -4em;
+        padding: 2.5em 1em;
+        background: $bg;
+        border-radius: 2.5em 2.5em 0 0;
+    }
+}
+
+.shop-title{
+    display: flex;
+    justify-content: space-between;
+    &__text{
+        font-family: 'Shrikhand', cursive;
+        font-size: 2em;
+        padding-left: .2em;
+    }   
+}
+
+.shop-group{
+    margin-top: 2.5em;
+    &__title{
+        color: #3d3d3d;
+        font-size: 1.2em;
+    }
+    &__line{
+        background: $color-tertiary;
+        height: .25em;
+        width: 3em;
+        margin-top: .3em;
+    }
+    &__list{
+        margin-top: 1.3em;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1em;
+        column-gap: 1em;
+    }
+}
+
+.shop-card{
+    flex: 1 0 40%;
+    min-width: 20em;
+    background: white;
+    border-radius: 1em;
+    box-shadow: 0 2px 10px lighten($box-shadow, 10%);
+    overflow: hidden;
+    display: flex;
+    &:hover{
+        cursor: pointer;
+        & > .shop-card__text{
+            min-width: calc(100% - 11em);;
+        }
+        & .shop-card__check-icon{
+            animation: check-rotation 450ms ease-in-out;
+        }
+    }
+    &__text{
+        min-width: calc(100% - 6em);
+        margin: 1em 0 1em 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: min-width 450ms ease-in-out;
+        &-title{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 1.2em;
+        }
+        &-info{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-top: .5em;
+        }
+    }
+    &__price{
+        display: block;
+        font-size: 1.2em;
+        align-self: flex-end;
+        padding: 0 1.5em .7em 1em;
+    }
+    &__check{
+        min-width: 5em;
+        background: $color-tertiary;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-icon{
+            transition: transform 500ms ease-in-out;
+            font-size: 1.5em;
+        }
+    }
+}
