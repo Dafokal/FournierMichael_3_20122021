@@ -103,7 +103,7 @@ button {
 }
 .btn--menu {
   margin: 3em auto 1em;
-  width: 11em;
+  width: 12em;
 }
 
 .card {
@@ -464,6 +464,5 @@ button {
   align-items: center;
 }
 .shop-card__check-icon {
-  transition: transform 500ms ease-in-out;
   font-size: 1.5em;
 }/*# sourceMappingURL=style.css.map */

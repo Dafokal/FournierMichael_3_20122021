@@ -57,7 +57,7 @@
     &:hover{
         cursor: pointer;
         & > .shop-card__text{
-            min-width: calc(100% - 11em);;
+            min-width: calc(100% - 11em);
         }
         & .shop-card__check-icon{
             animation: check-rotation 450ms ease-in-out;
@@ -94,7 +94,6 @@
         justify-content: center;
         align-items: center;
         &-icon{
-            transition: transform 500ms ease-in-out;
             font-size: 1.5em;
         }
     }
