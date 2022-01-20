@@ -1,6 +1,5 @@
 
 .body-fade-in{
-    position: relative;
     overflow: hidden;
     animation: body-fade-in 0ms $loading-duration forwards;
 }
@@ -68,7 +67,7 @@
         top: 0;
         left: 0;
         color: #3d3d3d;
-        transition: opacity 200ms ease-in-out;
+        @include heart-fill();
         &:hover{
             opacity: 0;
             & + i{
@@ -84,6 +83,6 @@
         background: linear-gradient($color-primary, $color-secondary);
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        transition: opacity 200ms ease-in-out;
+        @include heart-fill();
     }
 }

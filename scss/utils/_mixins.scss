@@ -1,3 +1,8 @@
-@mixin shop-fade-in($delay:0ms){
+
+@mixin shop-fade-in($delay){
     animation: shop-fade-in 800ms $delay ease-out forwards;
+}
+
+@mixin heart-fill($delay:$heart-duration){
+    transition: opacity $delay ease-in-out;
 }
