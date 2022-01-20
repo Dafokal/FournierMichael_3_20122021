@@ -60,16 +60,16 @@
     opacity: 0;
     transform: translateY(1em);
     &:nth-child(1){
-        @include shop-fade-in(500ms);
+        @include shop-fade-in($shop-delay);
     }
     &:nth-child(2){
-        @include shop-fade-in(650ms);
+        @include shop-fade-in(calc(#{$shop-delay} + 150ms));
     }
     &:nth-child(3){
-        @include shop-fade-in(800ms);
+        @include shop-fade-in(calc(#{$shop-delay} + 300ms));
     }
     &:nth-child(4){
-        @include shop-fade-in(950ms);
+        @include shop-fade-in(calc(#{$shop-delay} + 450ms));
     }
     &:hover{
         cursor: pointer;

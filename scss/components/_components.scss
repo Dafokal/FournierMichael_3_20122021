@@ -38,12 +38,11 @@
     &:hover{
         cursor: pointer;
         box-shadow: 0 5px 7px $box-shadow;
-        background: linear-gradient(lighten($color-secondary, 2%), lighten($color-primary, 2%));
+        background: linear-gradient(lighten($color-secondary, 3%), lighten($color-primary, 3%));
     }
     &--menu{
         margin: 3em auto 1em;
-        width: 40%;
-        min-width: max-content;
+        width: 14em;
     }
 }
 
