@@ -9,3 +9,29 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes body-fade-in{
+    100%{
+        overflow: auto;
+    }
+}
+
+@keyframes loading-fade-out{
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes spinner-rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shop-fade-in{
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

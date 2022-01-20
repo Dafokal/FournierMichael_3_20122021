@@ -1,3 +1,27 @@
+
+.body-fade-in{
+    position: relative;
+    overflow: hidden;
+    animation: body-fade-in 0ms $loading-duration forwards;
+}
+
+.loading{
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    animation: loading-fade-out 500ms $loading-duration ease-in-out forwards;
+    &__spinner{
+        width: 6em;
+        margin: calc(50vh - 3em) calc(50vw - 3em);
+        transform-origin: center center;
+        animation: spinner-rotate 900ms linear infinite;
+    }
+}
+
 .btn{
     margin: 1em;
     font-size: 1.1em;
@@ -14,62 +38,13 @@
     }
     &:hover{
         cursor: pointer;
+        box-shadow: 0 5px 7px $box-shadow;
+        background: linear-gradient(lighten($color-secondary, 2%), lighten($color-primary, 2%));
     }
     &--menu{
         margin: 3em auto 1em;
-        width: 12em;
-    }
-}
-
-.card{
-    position: relative;
-    flex: 1 0 45%;
-    min-width: 21em;
-    height: 20em;
-    @media screen and (min-width: 992px){
-        flex: 1 0 21em;
-        max-width: calc(33.3% - 1em);
-    }
-    &__link{
-        position: relative;
-        width: 100%;
-        height: 100%;
-        box-shadow: 0 2px 10px lighten($box-shadow, 10%);
-        background: white;
-        border-radius: $card-border;
-        display: flex;
-        flex-direction: column;
-        &-img{
-            border-radius: $card-border $card-border 0 0;
-            object-fit: cover;
-            width: 100%;
-            height: 70%;
-        }
-        &-info{
-            flex-grow: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            &-text{
-                margin-left: 1em;
-                &-title{
-                    font-size: 1.4em;
-                }
-                &-location{
-                    margin-top: .5em;
-                    font-size: 1.3em;
-                }
-            }
-        }
-        &-new{
-            position: absolute;
-            top: 1em;
-            right: 1em;
-            background: #99e2d0;
-            color: #008766;
-            padding: .5em .8em;
-            font-size: 1.2em;
-        }
+        width: 40%;
+        min-width: max-content;
     }
 }
 
@@ -87,7 +62,7 @@
         right: 0;
         margin-right: 1em;
     }
-    &-outside{
+    &__outside{
         z-index: 1;
         position: absolute;
         top: 0;
@@ -101,7 +76,7 @@
             }
         }
     }
-    &-inside{
+    &__inside{
         opacity: 0;
         position: absolute;
         top: 0;

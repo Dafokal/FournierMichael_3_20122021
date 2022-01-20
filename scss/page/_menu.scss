@@ -49,11 +49,28 @@
 .shop-card{
     flex: 1 0 40%;
     min-width: 20em;
+    @media (min-width: 447px){
+        max-width: calc(50% - .5em);
+    }
     background: white;
     border-radius: 1em;
     box-shadow: 0 2px 10px lighten($box-shadow, 10%);
     overflow: hidden;
     display: flex;
+    opacity: 0;
+    transform: translateY(1em);
+    &:nth-child(1){
+        @include shop-fade-in(150ms);
+    }
+    &:nth-child(2){
+        @include shop-fade-in(300ms);
+    }
+    &:nth-child(3){
+        @include shop-fade-in(450ms);
+    }
+    &:nth-child(4){
+        @include shop-fade-in(600ms);
+    }
     &:hover{
         cursor: pointer;
         & > .shop-card__text{

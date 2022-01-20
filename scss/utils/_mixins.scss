@@ -1,0 +1,3 @@
+@mixin shop-fade-in($delay:0ms){
+    animation: shop-fade-in 800ms $delay ease-out forwards;
+}
