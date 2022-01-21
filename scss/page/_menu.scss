@@ -60,16 +60,16 @@
     opacity: 0;
     transform: translateY(1em);
     &:nth-child(1){
-        @include shop-fade-in($shop-delay);
+        @include shop-fade-in();
     }
     &:nth-child(2){
-        @include shop-fade-in(calc(#{$shop-delay} + 150ms));
+        @include shop-fade-in($delay:calc(#{$shop-delay} + 150ms));
     }
     &:nth-child(3){
-        @include shop-fade-in(calc(#{$shop-delay} + 300ms));
+        @include shop-fade-in($delay:calc(#{$shop-delay} + 300ms));
     }
     &:nth-child(4){
-        @include shop-fade-in(calc(#{$shop-delay} + 450ms));
+        @include shop-fade-in($delay:calc(#{$shop-delay} + 450ms));
     }
     &:hover{
         cursor: pointer;
@@ -77,7 +77,7 @@
             min-width: calc(100% - 11em);
         }
         & .shop-card__check-icon{
-            animation: check-rotation 450ms ease-in-out;
+            animation: check-rotation $check-duration ease-in-out;
         }
     }
     &__text{
@@ -85,7 +85,7 @@
         margin: 1em 0 1em 1em;
         overflow: hidden;
         white-space: nowrap;
-        transition: min-width 450ms ease-in-out;
+        transition: min-width $check-duration ease-in-out;
         &-title{
             overflow: hidden;
             text-overflow: ellipsis;

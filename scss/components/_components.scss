@@ -1,7 +1,7 @@
 
 .body-fade-in{
     overflow: hidden;
-    animation: body-fade-in 0ms $loading-duration forwards;
+    animation: body-fade-in 0ms $loading-delay forwards;
 }
 
 .loading{
@@ -11,13 +11,14 @@
     left: 0;
     right: 0;
     bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: white;
-    animation: loading-fade-out 500ms $loading-duration ease-in-out forwards;
+    animation: loading-fade-out $loading-duration $loading-delay ease-in-out forwards;
     &__spinner{
         width: 6em;
-        margin: calc(50vh - 3em) calc(50vw - 3em);
-        transform-origin: center center;
-        animation: spinner-rotate 900ms linear infinite;
+        animation: spinner-rotate $spinner-duration linear infinite;
     }
 }
 
